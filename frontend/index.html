@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot - Gemini API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-content">
+                <h1>AI Chatbot</h1>
+                <button id="newChatBtn" class="btn btn-reset">New Chat</button>
+            </div>
+        </header>
+
+        <main class="chat-container">
+            <div id="chatMessages" class="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <p>Hello! I'm your AI assistant powered by Google Gemini. You can chat with me, upload documents (PDF/TXT), or share images (PNG/JPG). How can I help you today?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="imagePreview" class="image-preview" style="display: none;">
+                <div class="preview-header">
+                    <span id="imageName">Image uploaded</span>
+                    <button id="removeImageBtn" class="btn-close">✕</button>
+                </div>
+                <img id="previewImg" src="" alt="Preview">
+            </div>
+
+            <div id="documentPreview" class="document-preview" style="display: none;">
+                <div class="preview-header">
+                    <span id="documentName">Document uploaded</span>
+                    <button id="removeDocumentBtn" class="btn-close">✕</button>
+                </div>
+                <div class="document-text-preview">
+                    <p id="documentPreviewText"></p>
+                </div>
+            </div>
+        </main>
+
+        <div class="input-area">
+            <div class="input-controls">
+                <button id="docUploadBtn" class="btn btn-control" title="Upload PDF or TXT">
+                    Document Upload
+                </button>
+                <button id="imgUploadBtn" class="btn btn-control" title="Upload PNG or JPG">
+                    Image Upload
+                </button>
+            </div>
+
+            <div class="message-input-group">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    class="message-input" 
+                    placeholder="Type your message..." 
+                    autocomplete="off"
+                >
+                <button id="sendBtn" class="btn btn-send">Send</button>
+            </div>
+        </div>
+
+        <div id="loadingIndicator" class="loading" style="display: none;">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <input type="file" id="documentInput" style="display: none;" accept=".pdf,.txt">
+    <input type="file" id="imageInput" style="display: none;" accept=".png,.jpg,.jpeg">
+
+    <script src="script.js"></script>
+</body>
+</html>
