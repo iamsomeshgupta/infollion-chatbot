@@ -92,15 +92,15 @@ Then visit: `http://localhost:8000`
 ```
 infollion/
 ├── backend/
-│   ├── server.js           # Express server
-│   ├── package.json        # Dependencies
-│   ├── .env               # Configuration
+│   ├── server.js          
+│   ├── package.json       
+│   ├── .env               
 │   └── .gitignore
 ├── frontend/
-│   ├── index.html         # Main UI
-│   ├── styles.css         # Styling
-│   └── script.js          # Client logic
-├── README.md              # This file
+│   ├── index.html         
+│   ├── styles.css         
+│   └── script.js          
+├── README.md              
 └── .gitignore
 ```
 
