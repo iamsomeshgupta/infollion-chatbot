@@ -170,3 +170,8 @@ app.get('/list-models', async (req, res) => {
     return res.status(500).json({ success: false, error: err.message });
   });
 });
+
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`API Key loaded: ${process.env.GEMINI_API_KEY ? 'YES' : 'NO'}`);
+});
